@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+*{
+     padding:0;
+     margin: 0;
+     box-sizing: border-box;
+}
+
+:root{
+     --clr-white:hsl(0, 0%, 100%);
+     --clr-grayish-blue:hsl(240, 2%, 79%);
+     --clr-very-grayish-blue:hsl(207, 13%, 34%);
+     --clr-very-black-blue:hsl(240, 10%, 16%);
+     --clr-light-red:hsl(353, 100%, 62%);
+     --Very-light-red: hsl(13, 100%, 72%);
+
+     --Very-dark-gray-blue: hsl(237, 17%, 21%);
+     --Very-dark-desaturated-blue: hsl(237, 23%, 32%);
+     --bg-gradient:linear-gradient(75deg, var(--Very-light-red) 20%, var(--clr-light-red) 80%);
+}
+
+body{
+     line-height: 3rem;
+     background-color: rgb(252, 252, 252);
+     font-size:16px;
+     min-height: 100vh;
+}
+
+
+a{
+     color:var(--clr-white);
+     text-decoration: none;
+     font-size: 14px;
+     font-family:'Ubuntu', sans-serif;
+}
+
+.container{
+     margin:  0 auto;
+     max-width: 1000px;
+}
+
+.d-flex{
+     display: flex;
+     justify-content: space-between;
+}
+
+.btn{
+     border: none;
+     outline:none;
+     border-radius:20px;
+     font-size:14px;
+     font-weight: bold;
+     font-family: 'Overpass', sans-serif;
+     padding:15px 25px;
+     cursor: pointer;
+}
+
+
+
+.btn-light{
+     background-color: var(--clr-white);
+     color:var(--clr-light-red);
+     padding:7px 15px;
+}
+
+.btn-light a{
+     color:var(--clr-light-red);
+}
+
+
+.btn-outline{
+     border:1px solid var(--clr-white);
+     background:none;
+     color:var(--clr-white);
+     font-size: 14px;
+     text-transform: capitalize;
+     padding:7px 15px;
+}
+
+.btn-outline a{
+     color:#fff;
+}
+
+
+/* ================ Showcase Section  ============*/
+
+#showcase{
+     background-image:url(../images/bg-pattern-intro-desktop.svg);
+     background-position: center ;
+     padding:4rem 0;
+     border-bottom-left-radius: 50px;
+     position: relative;
+     overflow: hidden;
+}
+
+#showcase .container{
+     display: flex;
+     flex-direction: column;
+     gap:5rem;
+}
+
+#showcase::before{
+     content:'';
+     background:var(--bg-gradient);
+     position: absolute;
+     width:100%;
+     height:100%;
+     left:0;
+     top:0;
+     z-index:-1;
+     opacity: 90%;
+}
+
+
+
+.nav{
+     display:flex;
+     justify-content: space-between;
+}
+
+.nav .left-side{
+     width:40%;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+}
+
+.nav .logo{
+     font-size: 26px;
+     color:var(--clr-white);
+     font-family: 'Overpass', sans-serif;
+}
+
+.right-side .nav-list{
+     list-style: none;
+     display:flex;
+     gap:15px;
+     justify-content: baseline;
+}
+
+.right-side{
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+}
+
+#login{
+     background:none;
+     color:#fff;
+}
+
+#signUp{
+     color: var(--clr-light-red);
+
+}
+
+.right-side #login a, .right-side #signUp a, .btn-container .btn-light a, .btn-container .btn-outline a{
+     font-size: 18px;
+     font-family: 'Overpass', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+.hamburger{
+     display: none;
+}
+
+
+/*============ Branding Section ============*/
+#branding{
+     margin:3rem 0;
+     display: flex;
+     flex-direction: column;
+     gap: 30px;
+}
+
+.brand-header{
+     text-align: center;
+     color:var(--clr-white);
+     font-size: 3rem;
+     font-family: 'Ubuntu', sans-serif;
+}
+
+#branding p {
+     color:var(--clr-white);
+     font-size: 1.1rem;
+     font-family: 'Ubuntu', sans-serif;
+     text-align: center;
+}
+
+
+.btn-container{
+     display: flex;
+     gap: 10px;
+     justify-content: center;
+     margin: 3rem 0 ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================Intro -section  ==============*/
+
+#introSection .container{
+     display:flex;
+     flex-direction:column;
+     gap: 2rem;
+}
+
+#productDescription{
+     display:flex;
+     flex-direction:column;
+     gap: 1rem;
+}
+
+#introSection #intro-header h1, #productDescription #description-header h1,
+#description-sub{
+     margin: 20px 0;
+     font-size: 2.3rem;
+     text-align: center;
+     font-family: 'Overpass', sans-serif;
+     color:var(--Very-dark-desaturated-blue);
+}
+
+#productDescription #description-header h1{
+     text-align: left;
+}
+
+#description-sub{
+     text-align:left;
+     margin: 20px 0 0 10px;
+}
+
+#circles-image-box-desktop{
+     max-width: 100%;
+     order: 2;
+     flex:2;
+     margin: 10px 30px;
+     width:100%;
+}
+
+#circles-image-box-desktop img{
+     max-width: 100%;
+}
+
+#circles-image-box-mobile {
+     display: none;
+}
+
+
+.description{
+     flex:2;
+}
+
+.description p {
+     line-height: 1.8rem;
+     font-size: 1.2rem;
+     color: var(--clr-very-grayish-blue);
+     margin: 0px 0;
+     font-family: 'Ubuntu', sans-serif;
+}
+
+
+#productDescription .d-flex{
+     gap: 5rem;
+}
+
+
+@media screen and (max-width:1020px){
+     .description p{
+          text-align: center;
+     }
+     #productDescription #description-header h1, #description-sub h1{
+          text-align: center;
+     }
+
+
+
+     .description{
+          justify-content: space-around;
+     }
+     
+
+     .right-side{
+          justify-content: space-around;
+     }
+
+     .container{
+          padding:1rem 3rem;
+     }
+}
+
+
+@media screen and (max-width:920px) {
+
+     #circles-image-box-desktop{
+          display: none;
+     }
+
+
+     #circles-image-box-mobile{
+          display: block;
+     }
+
+     .container{
+          margin: 1rem auto;
+          padding:1rem 3rem;
+     }
+
+     #showcase{
+          background-image: url(../images/bg-pattern-intro-mobile.svg);
+          padding: 3rem 1rem;
+     }
+
+     a{
+          color: #333;
+     }
+
+     .right-side{
+          position: absolute;
+          right: 15%;
+          top: 30%;
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 25px 10px;
+          width: 70%;
+          border-radius: 10px;
+          transform: translate(150%);
+          transition: transform 0.7s ease-in;
+     }
+
+     .right-side .nav-list{
+          flex-direction: column;
+          order: 1;
+          line-height: 1.3rem;
+     }
+
+     .list-item a{
+          font-size: 18px;
+          color:#333;
+     }
+
+     .right-side #buttons{
+          margin-top: 20px;
+          order: 2;
+          display: flex;
+          flex-direction: column;
+     }
+     
+
+
+     .right-side #signUp{
+          background:var(--bg-gradient) ;
+          padding: 11px 25px;
+          margin-top: 20px;
+     }
+
+     .right-side #signUp a{
+          color:#fff;
+     }
+
+     .hamburger{
+          display: block;
+          cursor:pointer;
+     }
+
+
+     .nav-active{
+          transform: translate(0%);
+     }
+
+
+     @keyframes navSlider {
+          from {
+               justify-content: end;
+               align-items: end;
+          }
+
+          to{
+               opacity: 1;
+               justify-content: center;
+               align-items: center;
+          }
+     }
+
+     #brand-text{
+          line-height: 1.4rem;
+     }
+
+     #productDescription .d-flex{
+          flex-direction: column;
+     }
+
+     #description-sub{
+          text-align: center;
+     }
+
+}
+
+@media screen and (max-width:768px) {
+     .btn-container{
+          flex-direction: column;
+     }
+}
